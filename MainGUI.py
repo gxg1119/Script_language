@@ -11,8 +11,9 @@ class MainGUI:
         self.InitLogo()
         self.InitInPutLabel()
         self.InitSearchButton()
-        self.InitImage()
-        self.InitMailButton()
+        #self.InitImage()
+        self.MailButton()
+        self.MapButton()
 
         self.window.mainloop()
 
@@ -50,11 +51,19 @@ class MainGUI:
         pass
 
     # 메일 서비스 버튼 UI
-    def InitMailButton(self):
+    def MailButton(self):
         photo = PhotoImage(file="image/Gmail.png").subsample(11,11)
         SearchButton = Button(self.window, image=photo)
         SearchButton.image = photo
         SearchButton.pack()
         SearchButton.place(x=330, y=680)
+
+    # 지도 서비스 버튼 UI
+    def MapButton(self):
+        photo = PhotoImage(file="image/지도.png").subsample(11,11)
+        SearchButton = Button(self.window, image=photo)
+        SearchButton.image = photo
+        SearchButton.pack()
+        SearchButton.place(x=460, y=680)
 
 MainGUI()
