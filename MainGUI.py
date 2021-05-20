@@ -11,8 +11,12 @@ class MainGUI:
         self.InitLogo()
         self.InitInPutLabel()
         self.InitSearchButton()
+        self.InitImage()
+        self.InitMailButton()
+
         self.window.mainloop()
 
+    # 프로그램 이름 UI
     def InitLogo(self):
         TempFont_1 = font.Font(self.window, size=70, weight='bold', family='1훈떡볶이 Regular')
         MainText = Label(self.window, font=TempFont_1, text="Accident")
@@ -26,6 +30,7 @@ class MainGUI:
         SubText['bg'] = 'old lace'
         SubText.place(x=15, y=90)
 
+    # 검색 창 UI
     def InitInPutLabel(self):
         global InPutLabel
         TempFont = font.Font(self.window, size=20, weight='bold', family='1훈떡볶이 Regular')
@@ -34,6 +39,7 @@ class MainGUI:
         InPutLabel.pack()
         InPutLabel.place(x=15, y=155)
 
+    # 검색 버튼 UI
     def InitSearchButton(self):
         TempFont = font.Font(self.window, size=20, weight='bold', family='1훈떡볶이 Regular')
         SearchButton = Button(self.window, font=TempFont, text="검색", command=self.SearchButtonAction)
@@ -42,5 +48,13 @@ class MainGUI:
 
     def SearchButtonAction(self):
         pass
+
+    # 메일 서비스 버튼 UI
+    def InitMailButton(self):
+        photo = PhotoImage(file="image/Gmail.png").subsample(11,11)
+        SearchButton = Button(self.window, image=photo)
+        SearchButton.image = photo
+        SearchButton.pack()
+        SearchButton.place(x=330, y=680)
 
 MainGUI()
