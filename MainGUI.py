@@ -24,7 +24,7 @@ def InitLogo():
 
 # 검색 창 UI
 def InitInPutLabel():
-    global InPutLabel
+    global InPutEntry
     TempFont = font.Font(window, size=20, weight='bold', family='1훈떡볶이 Regular')
     InPutEntry = Entry(window, font=TempFont, width=15, borderwidth=10, relief='ridge')
 
@@ -38,8 +38,19 @@ def InitSearchButton():
     SearchButton.pack()
     SearchButton.place(x=270, y=155)
 
-def SearchButtonAction(self):
-    pass
+# 검색 버튼을 눌렀을 때 지명 주소 정보들이 바로 밑 박스들에 나열
+def SearchButtonAction():
+    idx = 0
+
+    RoadAddressBox.configure(state='normal')
+    RoadAddressBox.delete(0,RoadAddressBox.size()-1)
+
+    for i in XMLServer.DataList:
+        tempList = i
+
+        if InPutEntry.get() == tempList[0]:
+            RoadAddressBox.insert(idx, i[3])
+            idx += 1
 
 # 각 경기도 시 마다의 로고 이미지 UI
 def InitImage():
@@ -73,11 +84,12 @@ def RoadAddressBox():
 
 # 대피시설 정보 Text UI
 def Info_Shelter():
+    global Rendertext
     TempFont = font.Font(window, size=15, family='1훈떡볶이 Regular')
-    text = Text(window, font= TempFont, width=30, height=20, borderwidth = 10,
+    Rendertext = Text(window, font= TempFont, width=30, height=20, borderwidth = 10,
                 relief = 'ridge')
-    text.pack()
-    text.place(x=15, y=400)
+    Rendertext.pack()
+    Rendertext.place(x=15, y=400)
 
 # 메일 서비스 버튼 UI
 def MailButton():
@@ -97,6 +109,7 @@ def MapButton():
     SearchButton.pack()
     SearchButton.place(x=470, y=680)
 
+XMLServer.URLbuilder(0)
 
 InitLogo()
 InitInPutLabel()

@@ -2,7 +2,6 @@ import http.client
 from tkinter import INSERT
 from xml.etree import ElementTree
 
-cnt = 0
 DataList = []
 
 CityList = ['가평군', '고양시', '과천시', '광명시', '광주시', '구리시', '군포시', '김포시',
@@ -40,7 +39,6 @@ def URLrequest(CategoryNum, KEY):  # 카테고리별 파싱
 
 def XmlToList1(CategoryNum,temp):  # xml → 카테고리별(맛집 외) 리스트로
     tree = ElementTree.fromstring(temp)
-    global cnt
     for restaurant in tree.findall('./row'):
         City = restaurant.find('SIGUN_NM')                  # 시군명(1)
         Name = restaurant.find('BIZPLC_NM')                 # 대피시설명 (2)
@@ -52,8 +50,7 @@ def XmlToList1(CategoryNum,temp):  # xml → 카테고리별(맛집 외) 리스�
         Open = restaurant.find('BSN_STATE_NM')                # 운영상태
 
         #print(Name)
-        DataList.append([cnt +1, City.text, Name.text, RoadAddress.text, Address.text, Post.text, Lat.text, Long.text, Open.text])
-        cnt+=1
+        DataList.append([City.text, Name.text, RoadAddress.text, Address.text, Post.text, Lat.text, Long.text, Open.text])
         #print(City.text)
 
 
@@ -61,10 +58,5 @@ def getList(CategoryNum):
     if CategoryNum == 0:
         return DataList
 
-
-
-URLbuilder(0)
-print(cnt)
-print(DataList)
-#print(temp)
-#XmlToList1(0,temp)
+for i in DataList:
+    print(i)
