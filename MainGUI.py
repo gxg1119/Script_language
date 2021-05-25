@@ -109,7 +109,7 @@ def MapButton():
     SearchButton.pack()
     SearchButton.place(x=470, y=680)
 
-XMLServer.URLbuilder(0)
+XMLServer.URLbuilder()
 
 InitLogo()
 InitInPutLabel()

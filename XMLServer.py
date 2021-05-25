@@ -9,23 +9,21 @@ CityList = ['가평군', '고양시', '과천시', '광명시', '광주시', '�
             '안양시', '양주시', '양평군', '여주시', '연천군', '오산시', '용인시', '의왕시',
             '의정부시', '이천시', '파주시', '평택시', '포천시', '하남시', '화성시']
 
-
-def URLbuilder(CategoryNum):   #카테고리별 URL
+def URLbuilder():
     global KEY
-    global NAME
-    idx = 0
-    if CategoryNum == 0:
-        KEY = "/CivilDefenseEvacuation?KEY=af4823136cc84043934e53c8e8ba1d66"
 
-    URLrequest(CategoryNum, KEY + str("&pIndex=1") + str("&pSize=1000") + str("&SIGUN_NM="))
-    URLrequest(CategoryNum, KEY + str("&pIndex=2") + str("&pSize=1000") + str("&SIGUN_NM="))
-    URLrequest(CategoryNum, KEY + str("&pIndex=3") + str("&pSize=1000") + str("&SIGUN_NM="))
-    URLrequest(CategoryNum, KEY + str("&pIndex=4") + str("&pSize=1000") + str("&SIGUN_NM="))
-    URLrequest(CategoryNum, KEY + str("&pIndex=5") + str("&pSize=1000") + str("&SIGUN_NM="))
-    URLrequest(CategoryNum, KEY + str("&pIndex=6") + str("&pSize=1000") + str("&SIGUN_NM="))
+    KEY = "/CivilDefenseEvacuation?KEY=af4823136cc84043934e53c8e8ba1d66"
+
+    # 총 데이터 수 5542개 - 1페이지에 1000개 씩, 6페이지
+    URLrequest(KEY + str("&pIndex=1") + str("&pSize=1000") + str("&SIGUN_NM="))
+    URLrequest(KEY + str("&pIndex=2") + str("&pSize=1000") + str("&SIGUN_NM="))
+    URLrequest(KEY + str("&pIndex=3") + str("&pSize=1000") + str("&SIGUN_NM="))
+    URLrequest(KEY + str("&pIndex=4") + str("&pSize=1000") + str("&SIGUN_NM="))
+    URLrequest(KEY + str("&pIndex=5") + str("&pSize=1000") + str("&SIGUN_NM="))
+    URLrequest(KEY + str("&pIndex=6") + str("&pSize=1000") + str("&SIGUN_NM="))
 
 
-def URLrequest(CategoryNum, KEY):  # 카테고리별 파싱
+def URLrequest(KEY):
     con = http.client.HTTPSConnection("openapi.gg.go.kr")
     con.request("GET", KEY)
     req = con.getresponse()
@@ -33,30 +31,28 @@ def URLrequest(CategoryNum, KEY):  # 카테고리별 파싱
     if req.status == 200:
         temp = req.read().decode('utf-8')
         print("Data Downloading Complete!")
-        XmlToList1(0, temp)
+        XmlToList(temp)
     else:
         print("OpenAPI request Failed!")
 
-def XmlToList1(CategoryNum,temp):  # xml → 카테고리별(맛집 외) 리스트로
+def XmlToList(temp):
     tree = ElementTree.fromstring(temp)
-    for restaurant in tree.findall('./row'):
-        City = restaurant.find('SIGUN_NM')                  # 시군명(1)
-        Name = restaurant.find('BIZPLC_NM')                 # 대피시설명 (2)
-        RoadAddress = restaurant.find('REFINE_ROADNM_ADDR') # 도로명 주소(19)
-        Address = restaurant.find('REFINE_LOTNO_ADDR')      # 지번 주소(20)
-        Post = restaurant.find('ROADNM_ZIP_CD')             # 우편 번호(21)
-        Lat = restaurant.find('REFINE_WGS84_LAT')           # 위도(22)
-        Long = restaurant.find('REFINE_WGS84_LOGT')         # 경도(23)
-        Open = restaurant.find('BSN_STATE_NM')                # 운영상태
 
-        #print(Name)
-        DataList.append([City.text, Name.text, RoadAddress.text, Address.text, Post.text, Lat.text, Long.text, Open.text])
-        #print(City.text)
+    for shelter in tree.findall('./row'):
+        City = shelter.find('SIGUN_NM')                     # 시군명
+        Shelter_Name = shelter.find('BIZPLC_NM')            # 대피시설명
+        License_date = shelter.find('LICENSG_DE')           # 인허가 일자
+        Open = shelter.find('BSN_STATE_NM')                 # 운영상태
+        Area = shelter.find('LOCPLC_AR_INFO')               # 소재지 면적정보
+        RoadAddress = shelter.find('REFINE_ROADNM_ADDR')    # 소재지 도로명 주소
+        Address = shelter.find('REFINE_LOTNO_ADDR')         # 소재지 지번 주소
+        Post = shelter.find('ROADNM_ZIP_CD')                # 소재지 우편 번호
+        Public_Private = shelter.find('FACLT_DIV_NM')       # 시설 구분명 (공공, 민간)
+        Lat = shelter.find('REFINE_WGS84_LAT')              # 위도
+        Long = shelter.find('REFINE_WGS84_LOGT')            # 경도
 
-
-def getList(CategoryNum):
-    if CategoryNum == 0:
-        return DataList
+        DataList.append([City.text, Shelter_Name.text, License_date.text, Open.text, Area.text,
+                         RoadAddress.text, Address.text, Post.text, Public_Private.text, Lat.text, Long.text])
 
 for i in DataList:
     print(i)

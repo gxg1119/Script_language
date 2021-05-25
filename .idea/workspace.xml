@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02483384-fcc6-41de-ae0a-9a3798095432" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XMLServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/XMLServer.py" afterDir="false" />
     </list>
@@ -31,7 +32,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/KpuOnlineJudge" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.MainGUI">
+  <component name="RunManager" selected="Python.XMLServer">
     <configuration name="메모장" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Script_language" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.MainGUI" />
         <item itemvalue="Python.XMLServer" />
+        <item itemvalue="Python.MainGUI" />
         <item itemvalue="Python.메모장" />
       </list>
     </recent_temporary>
