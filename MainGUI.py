@@ -9,17 +9,17 @@ window.geometry("600x850")
 
 # 프로그램 이름 UI
 def InitLogo():
-    TempFont_1 = font.Font(window, size=70, weight='bold', family='1훈떡볶이 Regular')
-    MainText = Label(window, font=TempFont_1, text="Accident")
+    TempFont_1 = font.Font(window, size=75, weight='bold', family='Hans CalliPunch')
+    MainText = Label(window, font=TempFont_1, text="AccIdenT")
     MainText.pack()
     MainText['bg'] = color
-    MainText.place(x=10, y=10)
+    MainText.place(x=10, y=5)
 
-    TempFont_2 = font.Font(window, size=30, weight='bold', family='1훈떡볶이 Regular')
+    TempFont_2 = font.Font(window, size=30, weight='bold', family='Hans CalliPunch')
     SubText = Label(window, font=TempFont_2, text="민방위 대피시설 위치")
     SubText.pack()
     SubText['bg'] = color
-    SubText.place(x=15, y=90)
+    SubText.place(x=15, y=95)
 
 # 검색 창 UI
 def InitInPutLabel():
