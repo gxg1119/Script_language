@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import font
+import XMLServer
 
 window = Tk()
 window.title('Accident')
@@ -64,6 +65,9 @@ def RoadAddressBox():
     RoadAddressBox.pack(side = 'left')
     RATScrollbar["command"]=RoadAddressBox.yview
 
+    RoadAddressBox.insert(0,XMLServer.DataList[0][4])
+    RoadAddressBox.insert(1,"\n")
+    RoadAddressBox.insert(0, XMLServer.DataList[1][4])
     frame.pack()
     frame.place(x = 14, y = 220)
 
