@@ -42,7 +42,7 @@ def InitSearchButton():
 def SearchButtonAction():
     idx = 0
 
-    InitImage()
+    InputImage()
     RoadAddressBox.configure(state='normal')
     RoadAddressBox.delete(0,RoadAddressBox.size()-1)
 
@@ -54,10 +54,17 @@ def SearchButtonAction():
             idx += 1
 
 # 각 경기도 시 마다의 로고 이미지 UI
-def InitImage():
+def InputImage():
     Image_name = InPutEntry.get()
     image = PhotoImage(file="logo/"+Image_name+".png").subsample(4,4)
     imageLabel= Label(window,image=image, width = 200, height = 200)
+    imageLabel.image = image
+    imageLabel.pack()
+    imageLabel.place(x=380, y = 8)
+
+def InitImage():
+    image = PhotoImage(file="logo/대피소 그림.png").subsample(2,2)
+    imageLabel= Label(window,image=image, width = 200, height = 200, bg = color)
     imageLabel.image = image
     imageLabel.pack()
     imageLabel.place(x=380, y = 8)
@@ -113,7 +120,7 @@ XMLServer.URLbuilder()
 InitLogo()
 InitInPutLabel()
 InitSearchButton()
-#InitImage()
+InitImage()
 
 RoadAddressBox()
 Info_Shelter()
