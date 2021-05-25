@@ -49,16 +49,16 @@ def SearchButtonAction():
         tempList = i
 
         if InPutEntry.get() == tempList[0]:
-            RoadAddressBox.insert(idx, i[3])
+            RoadAddressBox.insert(idx, i[6])
             idx += 1
 
 # 각 경기도 시 마다의 로고 이미지 UI
 def InitImage():
     image = PhotoImage(file="image/1.png").subsample(2,2)
-    imageLabel= Label(window,image=image, width = 180, height = 180, relief= 'raised')
+    imageLabel= Label(window,image=image, width = 180, height = 180)
     imageLabel.image = image
     imageLabel.pack()
-    imageLabel.place(x=380, y = 15)
+    imageLabel.place(x=385, y = 15)
 
 # 대피시설 도로명 주소 ListBox UI
 def RoadAddressBox():
@@ -69,16 +69,13 @@ def RoadAddressBox():
     RATScrollbar = Scrollbar(frame)
     RATScrollbar.pack(side = 'right', fill = 'y')
 
-    TempFont = font.Font(frame, size = 15, family='1훈떡볶이 Regular')
-    RoadAddressBox = Listbox(frame, font = TempFont, width = 53, height = 7, borderwidth = 10,
+    TempFont = font.Font(frame, size = 13, family='1훈떡볶이 Regular')
+    RoadAddressBox = Listbox(frame, font = TempFont, width = 59, height = 7, borderwidth = 10,
                                relief='ridge',yscrollcommand=RATScrollbar.set)
 
     RoadAddressBox.pack(side = 'left')
     RATScrollbar["command"]=RoadAddressBox.yview
 
-    RoadAddressBox.insert(0,XMLServer.DataList[0][4])
-    RoadAddressBox.insert(1,"\n")
-    RoadAddressBox.insert(0, XMLServer.DataList[1][4])
     frame.pack()
     frame.place(x = 14, y = 220)
 
