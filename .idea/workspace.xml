@@ -2,7 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02483384-fcc6-41de-ae0a-9a3798095432" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/가평군.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/고양시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/과천시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/광명시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/광주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/구리시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/군포시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/김포시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/남양주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/대피소 그림.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/동두천시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/부천시.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/성남시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/수원시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/시흥시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/안산시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/안성시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/안양시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/양주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/양평군.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/여주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/연천군.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/오산시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/용인시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/의왕시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/의정부시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/이천시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/파주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/평택시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/포천시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/하남시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/화성시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/osm.html" beforeDir="false" afterPath="$PROJECT_DIR$/osm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,15 +123,5 @@
       <updated>1621904417511</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MainGUI.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

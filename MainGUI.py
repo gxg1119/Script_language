@@ -66,14 +66,14 @@ def SearchButtonAction():
 # 각 경기도 시 마다의 로고 이미지 UI
 def InputImage():
     Image_name = InPutEntry.get()
-    image = PhotoImage(file="logo/"+Image_name+".png").subsample(4,4)
+    image = PhotoImage(file="res/"+Image_name+".png").subsample(4,4)
     imageLabel= Label(window,image=image, width = 200, height = 200)
     imageLabel.image = image
     imageLabel.pack()
     imageLabel.place(x=380, y = 8)
 
 def InitImage():
-    image = PhotoImage(file="logo/대피소 그림.png").subsample(2,2)
+    image = PhotoImage(file="res/대피소 그림.png").subsample(2,2)
     imageLabel= Label(window,image=image, width = 200, height = 200, bg = color)
     imageLabel.image = image
     imageLabel.pack()
