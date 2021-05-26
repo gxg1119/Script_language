@@ -177,7 +177,7 @@ def Info_Shelter():
 
 def MailButton():
     photo = PhotoImage(file="res/Gmail.png").subsample(4,4)
-    SearchButton = Button(window, image=photo,command = SendEmailButtonAction)
+    SearchButton = Button(window, image=photo,command = SendEmailButtonAction, activebackground=color)
     SearchButton.image = photo
     SearchButton['bg'] = color
     SearchButton.pack()
@@ -188,8 +188,8 @@ def SendEmailButtonAction():
     global SearchListBox
     global myLocationBoxData
     global Contentdata
-    Mailadd = "gxg1119@naver.com"
-    Rendertext.configure(state='normal')
+    Mailadd = "20gamegenie@naver.com"
+    Rendertext.configure(state='disabled')
     Rendertext.delete(0.0, END)
     # iSearchIndex = SearchListBox.curselection()[0]
     # iSearchIndex = SearchListBox.curselection()[0]
@@ -213,11 +213,12 @@ def sendMail(ReviceMail, Subject, Content):
 # 지도 서비스 버튼 UI
 def MapButton():
     photo = PhotoImage(file="res/map.png").subsample(4,4)
-    SearchButton = Button(window, image=photo, command = Pressed)
+    SearchButton = Button(window, image=photo, command = Pressed, activebackground=color)
     SearchButton.image = photo
     SearchButton['bg'] = color
     SearchButton.pack()
     SearchButton.place(x=460, y=680)
+
 def Pressed():
     # 위도 경도 지정
     map_osm = folium.Map(location=[latitude,longitude], zoom_start=13)
@@ -256,7 +257,7 @@ def Graph():
         y1 = c_height - y_gap
         # Here we draw the bar
         c.create_rectangle(x0, y0, x1, y1, fill=color)
-        c.create_text(x0 + 25, y0, anchor=SW, text=str(y))
+        c.create_text(x0 + 35, y0 - 10, text=str(y))
     c.create_text(100, 192, text="공공시설           민간시설")
 
 XMLServer.URLbuilder()
