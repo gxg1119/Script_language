@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import font
 import XMLServer
 
+#from XMLServer import *
 window = Tk()
 window.title('Accident')
 color = 'SkyBlue1'
