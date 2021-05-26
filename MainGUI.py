@@ -11,21 +11,22 @@ import webbrowser
 #from XMLServer import *
 window = Tk()
 window.title('Accident')
-color = 'SkyBlue1'
+color = 'medium purple'
 window['bg'] = color
 window.geometry("600x850")
 tempList = []
+Public_num, Private_num = 0, 0
 
 # 프로그램 이름 UI
 def InitLogo():
     TempFont_1 = font.Font(window, size=75, weight='bold', family='Hans CalliPunch')
-    MainText = Label(window, font=TempFont_1, text="AccIdenT")
+    MainText = Label(window, font=TempFont_1, text="AccIdenT", fg='gray99')
     MainText.pack()
     MainText['bg'] = color
     MainText.place(x=10, y=5)
 
     TempFont_2 = font.Font(window, size=30, weight='bold', family='Hans CalliPunch')
-    SubText = Label(window, font=TempFont_2, text="민방위 대피시설 위치")
+    SubText = Label(window, font=TempFont_2, text="민방위 대피시설 위치", fg='gray99')
     SubText.pack()
     SubText['bg'] = color
     SubText.place(x=15, y=95)
@@ -49,8 +50,9 @@ def InitSearchButton():
 # 검색 버튼을 눌렀을 때 지명 주소 정보들이 바로 밑 박스들에 나열
 def SearchButtonAction():
     idx = 0
-    global tempList
+    global tempList, Public_num, Private_num
     tempList.clear()
+    Public_num, Private_num = 0, 0
 
     InputImage()
     RoadAddressBox.configure(state='normal')
@@ -59,9 +61,16 @@ def SearchButtonAction():
     for i in XMLServer.DataList:
         if InPutEntry.get() == i[0]:
             tempList.append(i)
-
             RoadAddressBox.insert(idx, i[6])
             idx += 1
+
+            if i[8] == '공공시설':
+                Public_num += 1
+            else :
+                Private_num += 1
+    Graph_logo()
+    Graph()
+    print(idx, Public_num, Private_num)
 
 # 각 경기도 시 마다의 로고 이미지 UI
 def InputImage():
@@ -73,7 +82,7 @@ def InputImage():
     imageLabel.place(x=380, y = 8)
 
 def InitImage():
-    image = PhotoImage(file="res/대피소 그림.png").subsample(2,2)
+    image = PhotoImage(file="res/대피소 로고.png").subsample(2,2)
     imageLabel= Label(window,image=image, width = 200, height = 200, bg = color)
     imageLabel.image = image
     imageLabel.pack()
@@ -167,12 +176,12 @@ def Info_Shelter():
 #    EmailLabel.place(x=80, y=105)
 
 def MailButton():
-    photo = PhotoImage(file="image/Gmail1.png").subsample(4,5)
+    photo = PhotoImage(file="res/Gmail.png").subsample(4,4)
     SearchButton = Button(window, image=photo,command = SendEmailButtonAction)
     SearchButton.image = photo
-    SearchButton['bg'] = 'old lace'
+    SearchButton['bg'] = color
     SearchButton.pack()
-    SearchButton.place(x=330, y=680)
+    SearchButton.place(x=320, y=680)
 
 def SendEmailButtonAction():
     global EmailLabel
@@ -201,15 +210,14 @@ def sendMail(ReviceMail, Subject, Content):
     msg['To'] = ReviceMail
     s.sendmail(senderAddr, ReviceMail, msg.as_string())
 
-
 # 지도 서비스 버튼 UI
 def MapButton():
-    photo = PhotoImage(file="image/gmap.png").subsample(5,5)
+    photo = PhotoImage(file="res/map.png").subsample(4,4)
     SearchButton = Button(window, image=photo, command = Pressed)
     SearchButton.image = photo
-    SearchButton['bg'] = 'old lace'
+    SearchButton['bg'] = color
     SearchButton.pack()
-    SearchButton.place(x=470, y=680)
+    SearchButton.place(x=460, y=680)
 def Pressed():
     # 위도 경도 지정
     map_osm = folium.Map(location=[latitude,longitude], zoom_start=13)
@@ -218,6 +226,38 @@ def Pressed():
     # html 파일로 저장
     map_osm.save('osm.html')
     webbrowser.open_new('osm.html')
+
+# 그래프 UI
+def Graph_logo():
+    city = InPutEntry.get()
+    Font = font.Font(window, size=20, weight='bold', family='1훈떡볶이 Regular')
+    Text = Label(window, font=Font, text=city+"\n공공시설 민간시설 수", fg='gray99')
+    Text.pack()
+    Text['bg'] = color
+    Text.place(x=345, y=385)
+
+def Graph():
+    data = [Public_num, Private_num]
+    c_width = 200
+    c_height = 200
+    c = Canvas(window, width=c_width, height=c_height, bg='white')
+    c.pack()
+    c.place(x= 357, y=450)
+
+    y_stretch = 0.25
+    y_gap = 20
+    x_stretch = 20
+    x_width = 70
+    x_gap = 20
+    for x, y in enumerate(data):
+        x0 = x * x_stretch + x * x_width + x_gap
+        y0 = c_height - (y * y_stretch + y_gap)
+        x1 = x * x_stretch + x * x_width + x_width + x_gap
+        y1 = c_height - y_gap
+        # Here we draw the bar
+        c.create_rectangle(x0, y0, x1, y1, fill=color)
+        c.create_text(x0 + 25, y0, anchor=SW, text=str(y))
+    c.create_text(100, 192, text="공공시설           민간시설")
 
 XMLServer.URLbuilder()
 
@@ -232,5 +272,7 @@ Info_Shelter()
 MailButton()
 #InitSendEmailLabel()
 MapButton()
+Graph()
+Graph_logo()
 
 window.mainloop()
