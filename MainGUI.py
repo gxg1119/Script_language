@@ -5,6 +5,8 @@ import mimetypes
 import smtplib
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
+import folium
+import webbrowser
 
 #from XMLServer import *
 window = Tk()
@@ -99,6 +101,9 @@ def RoadAddressBox():
 
 def CurSelect(evt):
     global Contentdata
+    global latitude
+    global longitude
+    global Shelter_Name
     Rendertext.configure(state='normal')
     Rendertext.delete(0.0,END)
     index = RoadAddressBox.index(RoadAddressBox.curselection())
@@ -111,6 +116,7 @@ def CurSelect(evt):
     Rendertext.insert(INSERT, "[2] 대피시설명 : ")
     Rendertext.insert(INSERT, tempList[index][1])       # 대피 시설명
     Contentdata += str("[2] 대피시설명 : " + tempList[index][1]) + str("\n\n")
+    Shelter_Name = tempList[index][1]
     Rendertext.insert(INSERT, '\n\n')
     Rendertext.insert(INSERT, "[3] 인허가 일자 : ")
     Rendertext.insert(INSERT, tempList[index][2])       # 인허가 일자
@@ -140,7 +146,8 @@ def CurSelect(evt):
     Rendertext.insert(INSERT, "[9] 시설 구분 : ")
     Rendertext.insert(INSERT, tempList[index][8])       # 시설 구분명 (공공 or 민간)
     Contentdata += str("[9] 시설 구분 : " + tempList[index][8]) + str("\n\n")
-
+    latitude = tempList[index][9]
+    longitude = tempList[index][10]
 # 대피시설 정보 Text UI
 def Info_Shelter():
     global Rendertext
@@ -198,11 +205,19 @@ def sendMail(ReviceMail, Subject, Content):
 # 지도 서비스 버튼 UI
 def MapButton():
     photo = PhotoImage(file="image/gmap.png").subsample(5,5)
-    SearchButton = Button(window, image=photo)
+    SearchButton = Button(window, image=photo, command = Pressed)
     SearchButton.image = photo
     SearchButton['bg'] = 'old lace'
     SearchButton.pack()
     SearchButton.place(x=470, y=680)
+def Pressed():
+    # 위도 경도 지정
+    map_osm = folium.Map(location=[latitude,longitude], zoom_start=13)
+    # 마커 지정
+    folium.Marker([latitude,longitude], popup=Shelter_Name).add_to(map_osm)
+    # html 파일로 저장
+    map_osm.save('osm.html')
+    webbrowser.open_new('osm.html')
 
 XMLServer.URLbuilder()
 
