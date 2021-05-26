@@ -10,9 +10,6 @@ CityList = ['가평군', '고양시', '과천시', '광명시', '광주시', '�
             '의정부시', '이천시', '파주시', '평택시', '포천시', '하남시', '화성시']
 
 def URLbuilder():
-    CategoryNum = 0
-
-def URLbuilder(CategoryNum):   #카테고리별 URL
     global KEY
 
     KEY = "/CivilDefenseEvacuation?KEY=af4823136cc84043934e53c8e8ba1d66"
@@ -89,9 +86,6 @@ def XmlToList(temp):
 
         DataList.append([City.text, Shelter_Name.text, License_date.text, Open.text, Area.text,
                          RoadAddress.text, Address.text, Post.text, Public_Private.text, Lat.text, Long.text])
-
-URLbuilder(CategoryNum)
-XmlToList1(CategoryNum)
 
 
 #for i in DataList:
