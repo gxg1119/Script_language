@@ -36,13 +36,27 @@ spam_division(PyObject* self, PyObject* args)
 
     return Py_BuildValue("i", quotient);
 }
+static PyObject*
+spam_getmail(PyObject* self)
+{
+    const char* ID = "zndtldy12@gmail.com";
 
+    return Py_BuildValue("s", ID);
+}
+static PyObject*
+spam_getAddr(PyObject* self)
+{
+    const char* Addr = "mirio4155@";
+
+    return Py_BuildValue("s", Addr);
+
+}
 
 static PyMethodDef SpamMethods[] = {
-    {"strlen", spam_strlen, METH_VARARGS,
-    "count a string length."},
-    {"division", spam_division, METH_VARARGS,
-    "division function \n return quotient, quotient is dividend / divisor"},
+    {"getmail", spam_getmail, METH_VARARGS,
+    "Get E mail"},
+    {"getAddr", spam_getAddr, METH_VARARGS,
+    "Get Address"},
     {NULL, NULL, 0, NULL}    //배열의 끝을 나타낸다.
 };
 

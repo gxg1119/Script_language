@@ -7,6 +7,8 @@ from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 import folium
 import webbrowser
+import spam
+
 
 #from XMLServer import *
 window = Tk()
@@ -202,7 +204,7 @@ def sendMail(ReviceMail, Subject, Content):
     s = smtplib.SMTP("smtp.gmail.com",587) #SMTP 서버 설정
     s.starttls() #STARTTLS 시작
     senderAddr ="zndtldy12@gmail.com"
-    s.login("zndtldy12@gmail.com","mirio4155@")
+    s.login(spam.getmail(),spam.getAddr())
     contents = Content
     msg = MIMEText(contents, _charset='euc-kr')
     msg['Subject'] = Subject

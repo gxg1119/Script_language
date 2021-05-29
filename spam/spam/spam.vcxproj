@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e6dc098f-40db-43c3-940b-e9474821f03b}</ProjectGuid>
+    <ProjectGuid>{a39a224a-ddad-4d52-ac4a-5426e4212b88}</ProjectGuid>
     <RootNamespace>spam</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -127,7 +127,6 @@
       <AdditionalLibraryDirectories>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>python37.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/export:PyInit_spam %(AdditionalOptions)</AdditionalOptions>
-      <OutputFile>$(OutDir)\spam.pyd</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -153,7 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SpamModule.c" />
+    <ClCompile Include="spammodule.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

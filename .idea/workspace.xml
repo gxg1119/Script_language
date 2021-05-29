@@ -3,7 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="02483384-fcc6-41de-ae0a-9a3798095432" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osm.html" beforeDir="false" afterPath="$PROJECT_DIR$/osm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/ipch/AutoPCH/6724692a22b2c26f/SPAMMODULE.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/ipch/AutoPCH/9077c086d7264795/SPAMMODULE.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/ipch/AutoPCH/ab5716027325087d/SPAMMODULE.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/SpamModule.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/SpamModule.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.dll.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.iobj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.ipdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.write.1u.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/vc142.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.pdb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
