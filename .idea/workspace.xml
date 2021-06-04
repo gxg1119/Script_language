@@ -3,33 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="02483384-fcc6-41de-ae0a-9a3798095432" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/Browse.VC.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/ipch/AutoPCH/6724692a22b2c26f/SPAMMODULE.ipch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/ipch/AutoPCH/9077c086d7264795/SPAMMODULE.ipch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/ipch/AutoPCH/ab5716027325087d/SPAMMODULE.ipch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/SpamModule.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj.filters" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/SpamModule.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.dll.recipe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.iobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.ipdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.write.1u.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/vc142.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.exp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.lib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.pdb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +30,12 @@
     <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/KpuOnlineJudge" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.MainGUI">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\영준\Documents\GitHub\Script_language" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.telegram">
     <configuration name="14.4-1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Script_language" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,8 +99,52 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="noti" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Script_language" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/noti.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="telegram" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Script_language" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/telegram.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.telegram" />
+        <item itemvalue="Python.noti" />
         <item itemvalue="Python.MainGUI" />
         <item itemvalue="Python.14.4-1" />
         <item itemvalue="Python.XMLServer" />
