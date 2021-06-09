@@ -77,6 +77,108 @@ def SearchButtonAction():
 # 각 경기도 시 마다의 로고 이미지 UI
 def InputImage():
     Image_name = InPutEntry.get()
+
+    if Image_name == '안산시':
+        Image_name = 'Ansan'
+        
+    elif Image_name == '안성시':
+        Image_name = 'Anseong'
+        
+    elif Image_name == '안성시':
+        Image_name = 'Anseong'
+
+    elif Image_name == '안양시':
+        Image_name = 'Anyang'
+        
+    elif Image_name == '부천시':
+        Image_name = 'Bucheon'
+        
+    elif Image_name == '동두천시':
+        Image_name = 'Dongducheon'
+        
+    elif Image_name == '가평군':
+        Image_name = 'Gapyeong'
+
+    elif Image_name == '김포시':
+        Image_name = 'Gimpo'
+
+    elif Image_name == '군포시':
+        Image_name = 'Gunpo'
+
+    elif Image_name == '고양시':
+        Image_name = 'Goyang'
+
+    elif Image_name == '구리시':
+        Image_name = 'Guri'
+        
+    elif Image_name == '안성시':
+        Image_name = 'Anseong'
+        
+    elif Image_name == '과천시':
+        Image_name = 'Gwacheon'
+
+    elif Image_name == '광주시':
+        Image_name = 'Gwangju'
+        
+    elif Image_name == '광명시':
+        Image_name = 'Gwangmyeong'
+        
+    elif Image_name == '하남시':
+        Image_name = 'Hanam'
+        
+    elif Image_name == '화성시':
+        Image_name = 'Hwaseong'
+
+    elif Image_name == '이천시':
+        Image_name = 'Icheon'
+
+    elif Image_name == '남양주시':
+        Image_name = 'Namyangju'
+
+    elif Image_name == '오산시':
+        Image_name = 'Osan'
+
+    elif Image_name == '파주시':
+        Image_name = 'Paju'
+
+    elif Image_name == '포천시':
+        Image_name = 'Pocheon'
+        
+    elif Image_name == '평택시':
+        Image_name = 'Pyeongtaek'
+        
+    elif Image_name == '성남시':
+        Image_name = 'Seongnam'
+
+    elif Image_name == '시흥시':
+        Image_name = 'Siheung'
+        
+    elif Image_name == '수원시':
+        Image_name = 'Suwon'
+        
+    elif Image_name == '의정부시':
+        Image_name = 'Uijeongbu'
+        
+    elif Image_name == '의왕시':
+        Image_name = 'Uiwang'
+
+    elif Image_name == '양주시':
+        Image_name = 'Yangju'
+
+    elif Image_name == '양평시':
+        Image_name = 'Yangpyeong'
+
+    elif Image_name == '여주시':
+        Image_name = 'Yeoju'
+
+    elif Image_name == '연천군':
+        Image_name = 'Yeoncheon'
+
+    elif Image_name == '용인':
+        Image_name = 'Yongin'
+
+
+
     image = PhotoImage(file="res/"+Image_name+".png").subsample(4,4)
     imageLabel= Label(window,image=image, width = 200, height = 200)
     imageLabel.image = image
@@ -84,7 +186,7 @@ def InputImage():
     imageLabel.place(x=380, y = 8)
 
 def InitImage():
-    image = PhotoImage(file="res/대피소 로고.png").subsample(2,2)
+    image = PhotoImage(file="res/logo.png").subsample(2,2)
     imageLabel= Label(window,image=image, width = 200, height = 200, bg = color)
     imageLabel.image = image
     imageLabel.pack()
