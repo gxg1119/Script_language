@@ -2,7 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02483384-fcc6-41de-ae0a-9a3798095432" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Script_language.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Script_language.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainGUI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XMLServer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noti.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/gmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/가평군.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/고양시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/과천시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/광명시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/광주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/구리시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/군포시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/김포시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/남양주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/대피소 로고.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/동두천시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/부천시.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/성남시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/수원시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/시흥시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/안산시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/안성시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/안양시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/양주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/양평군.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/여주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/연천군.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/오산시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/용인시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/의왕시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/의정부시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/이천시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/파주시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/평택시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/포천시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/하남시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/화성시.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/spam/.vs/spam/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/spam/.vs/spam/v16/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/spam/spam/x64/Release/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +79,7 @@
       <recent name="C:\Users\영준\Documents\GitHub\Script_language" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.telegram">
+  <component name="RunManager" selected="Python.MainGUI">
     <configuration name="14.4-1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Script_language" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,33 +108,12 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\pig75\OneDrive\Desktop\새 폴더\Script_language\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainGUI.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="XMLServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Script_language" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XMLServer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,6 +143,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Script_language" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="telegram" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Script_language" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,7 +171,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\pig75\OneDrive\Desktop\새 폴더\Script_language\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -143,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MainGUI" />
+        <item itemvalue="Python.setup" />
         <item itemvalue="Python.telegram" />
         <item itemvalue="Python.noti" />
-        <item itemvalue="Python.MainGUI" />
         <item itemvalue="Python.14.4-1" />
-        <item itemvalue="Python.XMLServer" />
       </list>
     </recent_temporary>
   </component>
